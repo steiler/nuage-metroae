@@ -22,6 +22,7 @@
       tasks_from: configure-ovftool
     vars:
       management_network: "Management"
+      data_network: "Data"
 
   - name: Deploy VNSUTIL image on vCenter
     include_role:

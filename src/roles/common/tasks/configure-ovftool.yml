@@ -21,5 +21,7 @@
       {% endif %}
       -n={{ vm_name }}
       --net:"{{ management_network }}={{ mgmt_bridge }}"
+      {% if data_network is defined %}
+      --net:"{{ data_network }}={{ data_bridge }}"
+      {% endif %}
       "{{ image_path }}/{{ image_file_name }}"
-
