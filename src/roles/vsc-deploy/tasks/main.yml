@@ -10,6 +10,11 @@
   set_fact:
     vprn_object_list: []
 
+- name: Fail here so we can debug
+  assert:
+    that: false
+    msg: 'Please stop here'
+
 - block:
 
   - name: Add Control IP VPRN and VLAN (to be deprecated)
